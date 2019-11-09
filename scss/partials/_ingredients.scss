@@ -1,0 +1,17 @@
+.ingredients {
+    background: url(../../images/bg-ingredients.jpg) center/cover no-repeat;
+    color: #fff;
+    padding: 40px 15px;
+
+    &__item {
+        padding: 30px 50px;
+        background: rgba(0, 0, 0, 0.5);
+        box-shadow: inset 0 0 30px 1px rgba(0,0,0,0.5);
+
+        &-img {
+            display: flex;
+            justify-content: space-between;
+            width: 35%;
+        }
+    }
+}

@@ -1,0 +1,77 @@
+.promo {
+  $white-color: rgba(255, 255, 255, 0.92);
+  min-height: 100vh;
+  padding: 25% 0;
+  background: url(../images/bg-header.jpg) center/cover no-repeat;
+  
+  @include screen (md) {
+    padding: 15% 0;
+  }
+  @include screen (xl) {
+    padding: 10% 0;
+  }
+
+  &__title {
+    margin-bottom: 50px;
+    padding-bottom: 60px;
+    position: relative;
+    color: $white-color;
+    font: 30px/1.4 $font-titles;
+    text-align: center;
+    text-shadow: 2px 2px 2px rgba(0,0,0,0.5);
+
+    @include screen (sm) {
+      font-size: 40px;
+    }
+    @include screen (md) {
+      font-size: 60px;
+    }
+    @include screen (lg) {
+      font-size: 75px;
+    }
+    @include screen (xl) {
+      font-size: 90px;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      bottom:0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 232px;
+      height: 43px;
+      background: url(../images/icon-divider-header.png) no-repeat;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+
+    &-item {
+      display: inline-block;
+      text-transform: uppercase;
+      font-size: 12px;
+      padding: 15px 0;
+      width: calc(50% - 15px);
+      color: $white-color;
+      border: 1px solid;
+
+      @include screen (md) {
+        font-size: 16px;   
+      }
+  
+      &-primary {
+        background: rgba(0,0,0,0.5);
+        border-color: black;
+      }
+
+      &-secondary {
+        background: rgba(255, 255, 255, 0.2);
+      }
+    }
+  }
+}
+

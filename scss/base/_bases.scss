@@ -1,0 +1,80 @@
+body {
+  font: 14px/1.5 $font-base;
+  color: $color-font;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: top;
+}
+
+.social {
+  $header-social-color: #dab33e;
+  &_header {
+    display: none;
+    margin-left: 15px;
+    color: $header-social-color;
+
+    @include screen (xl) {
+      display: block;
+    }
+
+    .social__item {
+      &:hover {
+        color: lighten($header-social-color, 20%);
+      }
+    }
+  }
+}
+
+.main-title {
+  margin-bottom: 30px;
+  padding-bottom: 40px;
+  position: relative;
+  font: 20px/1.4 $font-titles;
+  text-align: center;
+
+  @include screen (sm) {
+    font-size: 30px;
+  }
+  @include screen (lg) {
+    font-size: 40px;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 247px;
+    height: 24px;
+  }
+}
+
+.orange-title {
+  color: $color-title;
+
+  &::before {
+    background: url(../images/icon-divider-orange.png) no-repeat;
+   }
+}
+
+.white-title {
+  color: #fff;
+
+  &::before {
+    background: url(../images/icon-divider-white.png) no-repeat;
+  }
+}

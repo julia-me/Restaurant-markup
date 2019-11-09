@@ -1,0 +1,12 @@
+.about {
+    @include pattern-bg;
+
+    &__item {
+        text-align: center;
+
+        &-text-img {
+            margin-left: 50px;
+            padding-top: 30px;
+        }
+    }
+}

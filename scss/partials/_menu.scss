@@ -1,0 +1,33 @@
+.menu {
+    padding: 40px 0;
+    background: #f2f2f2 url(../images/bg-about-pattern.png) center/cover no-repeat;
+    
+    &__item-name {
+        padding: 0 10px;
+
+        &-spesial {
+            position: relative;
+            border: 1px solid $color-title;
+    
+            &::before {
+                content: 'special';
+                position: absolute;
+                top:0;
+                right: -1px;
+                transform: translateY(-100%);
+                padding: 5px;
+                background: $color-title;
+                color: #fff;
+    
+            }
+        }
+
+        &-cost {
+            display: flex;
+            justify-content: space-between;
+            color: $color-title;
+            text-transform: capitalize;
+            border-bottom: 1px solid $color-title;
+        }
+    }
+}

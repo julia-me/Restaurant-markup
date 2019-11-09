@@ -1,0 +1,64 @@
+.reservation {
+    @include pattern-bg;
+    padding: 60px 0;
+    // text-align: center;
+
+    &__item {
+        &:first-child {
+            display: flex;
+            justify-content: space-between;
+            max-width: 52%;
+
+            img:first-child {
+                margin-right: 20px;
+            }
+        }
+    }
+
+    .form {
+        &__inner-line {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        &__inner-item {
+            width: calc(50% - 10px);
+
+            &:last-child {
+                margin: 0 auto;
+            }
+        }
+
+        label {
+            color: $color-title;
+            font-size: 20px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="date"],
+        input[type="number"],
+        button {
+            width: 100%;
+            height: 50px;
+            margin-top: 10px;
+            padding: 0 20px;
+            background: rgba(255, 255, 255, 0.5);
+            border: 1px solid gray;
+            font-family: $font-form;
+            font-style: italic;
+            color: $color-font;
+            font-size: 14px;
+        }   
+
+        button {
+            background: $color-title;
+            font-style: normal;
+            color: #fff;
+            border: 0;
+        }
+    }
+}
+
+
